@@ -1,0 +1,4 @@
+module.exports = {
+    eventbriteEventId: '12345',
+    eventbriteToken: '12345'
+};
