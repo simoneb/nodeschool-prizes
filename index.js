@@ -14,6 +14,7 @@ function pickNext(attendees, attendeeIdx, interval) {
     charm.position(0, attendeeIdx + 1).background(color).write(attendee);
   }
 
+  process.stdout.write('\x07');
   writeAttendee('red');
 
   if (interval < 400) {
