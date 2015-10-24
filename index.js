@@ -35,9 +35,7 @@ charm.reset();
 
 request.get(urlFormat.assign(config.eventbriteEventId, config.eventbriteToken))
     .end(function (err, res) {
-      if (err) throw err;
-
-      var attendees = res.body.attendees
+      var attendees = (err ? [] : res.body.attendees)
           .findAll({ status: 'Attending' })
           .map('profile')
           .sortBy('last_name')
